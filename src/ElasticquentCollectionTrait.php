@@ -91,7 +91,7 @@ trait ElasticquentCollectionTrait
             $config = \Config::get('elasticquent.config');
         }
 
-        return \Elasticsearch\ClientBuilder::fromConfig(($config);
+        return \Elasticsearch\ClientBuilder::fromConfig($config, true);
     }
 
 }
