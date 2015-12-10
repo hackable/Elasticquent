@@ -196,11 +196,26 @@ trait ElasticquentTrait
      * index for this particular document.
      *
      * @return  array
-     */
+  
     public function getIndexDocumentData()
     {
         return $this->toArray();
     }
+    */
+
+     /**
+     * Get Index Document Data
+     *
+     * Get the data that Elasticsearch will
+     * index for this particular document.
+     *
+     * @return  array
+     */
+    public function getIndexDocumentData()
+    {
+        return $this->toTransform();
+    }
+
 
     public function excludeIndexDocumentData() {
         return [];
