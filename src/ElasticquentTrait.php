@@ -457,6 +457,21 @@ trait ElasticquentTrait
         return $instance->getElasticSearchClient()->indices()->putMapping($params);
     }
 
+
+
+    /**
+     * Delete Mapping
+     *
+     * @return array
+     */
+    public static function deleteMapping()
+    {
+        $instance = new static;
+        $params = $instance->getBasicEsParams();
+        return $instance->getElasticSearchClient()->indices()->deleteMapping($params);
+    }
+    
+    
     /**
      * Rebuild Mapping with zero downtime
      *
