@@ -254,7 +254,7 @@ trait ElasticquentTrait
     public static function searchByQuery($query = null, $aggregations = null, $sourceFields = null, $limit = null, $offset = null, $sort = null)
     {
         $instance = new static;
-        $params = $instance->getBasicEsParams(true, true, true, $limit, $offset);
+        $params = $instance->getBasicEsParams('read', true, true, $limit, $offset);
         if ($sourceFields) {
             $params['body']['_source']['include'] = $sourceFields;
         }
